@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="img/logo192.png">
+  <link rel="apple-touch-icon" href="img/logo192.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <title>Attendance Form &ndash; Med Revue</title>
+</head>
+<body class="bg-light">
+
+  <div class="container">
+    <main>
+      <div class="row pt-5 pb-3 text-center">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+          <img class="d-block mx-auto mb-5" src="/img/logo.png" alt="" width="360">
+          <h2>Attendance Form</h2>
+          <p class="lead">Please fill in the following form for our attendance records. This will also be automatically forwarded to Arc for contact tracing purposes.</p>
+        </div>
+        <div class="col-lg-3"></div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-12">
+              <label for="form-url" class="form-label">Form URL</label>
+              <input class="form-control" id="form-url" placeholder="https://example.com/form">
+              <div class="invalid-feedback">
+                Please enter a valid form URL.
+              </div>
+            </div>
+
+            <div class="col-12" id="qr-code-container">
+              <!-- QR Code inserted here by JS -->
+              <canvas id="qr-code-canvas" class="mx-auto d-none"></canvas>
+            </div>
+
+            <button class="w-100 btn btn-primary btn-lg" id="generate-qr-code">Generate QR Code</button>
+        </div>
+        <div class="col-lg-3"></div>
+      </div>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">© 2021 UNSW Medical Revue Society</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <script src="js/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
